@@ -11,7 +11,7 @@ export default function Footer() {
   const socialLinks = [
     {
       icon: faFacebook,
-      href: "https://www.facebook.com/people/Last-Mile-Enterprises/61556357176346/",
+      href: "https://www.facebook.com/profile.php?id=61556357176346",
       color: "hover:text-blue-600",
     },
     {
@@ -31,7 +31,7 @@ export default function Footer() {
     },
     {
       icon: faLinkedin,
-      href: "https://www.linkedin.com/company/lastmilent/about/",
+      href: "https://www.linkedin.com/company/lastmilent/",
       color: "hover:text-blue-800",
     },
   ];
@@ -47,10 +47,9 @@ export default function Footer() {
         </div>
         <div>
           {socialLinks.map(({ icon: Icon, href, color }) => (
-            <a href={href}>
+            <a href={href} target="_blank">
               <FontAwesomeIcon
                 icon={Icon}
-                target="_blank"
                 className={`text-[#F5EFE7] px-[10px] text-lg md:px-[11px] md:text-xl lg:px-[12px] ${color}`}
               />
             </a>
