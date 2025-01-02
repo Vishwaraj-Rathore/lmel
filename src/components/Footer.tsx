@@ -38,7 +38,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="bg-[#213555] text-[#F5EFE7] flex flex-col items-center gap-y-3 min-h-[150px] justify-center text-[13px] md:min-h-[125px] md:text-[16px] lg:flex-row lg:min-h-[100px] lg:justify-between lg:px-16">
+      <footer className="bg-[#27374D] text-white flex flex-col items-center gap-y-3 min-h-[100px] md:min-h-[120px] justify-center text-[10px] md:text-[14px] lg:flex-row lg:min-h-[100px] lg:justify-between lg:px-12">
         <div>
           <p>
             &copy; {new Date().getFullYear()} Last Mile Enterprises Limited. All
@@ -50,7 +50,7 @@ export default function Footer() {
             <a key={href} href={href} target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon
                 icon={Icon}
-                className={`text-[#F5EFE7] px-[10px] text-lg md:px-[11px] md:text-xl lg:px-[12px] ${color}`}
+                className={`text-white px-[10px] text-lg md:px-[11px] md:text-xl lg:px-[12px] ${color}`}
               />
             </a>
           ))}
