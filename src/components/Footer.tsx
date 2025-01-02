@@ -5,31 +5,44 @@ import {
   faTwitter,
   faLinkedin,
   faInstagram,
+  IconDefinition,
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
-  const socialLinks = [
+  type SocialLink = {
+    platformName: string;
+    icon: IconDefinition;
+    href: string;
+    color: string;
+  };
+
+  const socialLinks: SocialLink[] = [
     {
+      platformName: "Facebook",
       icon: faFacebook,
       href: "https://www.facebook.com/profile.php?id=61556357176346",
       color: "hover:text-blue-600",
     },
     {
+      platformName: "Instagram",
       icon: faInstagram,
       href: "https://www.instagram.com/lastmilent/",
       color: "hover:text-pink-600",
     },
     {
+      platformName: "Twitter",
       icon: faTwitter,
       href: "https://x.com/lastmilent",
       color: "hover:text-blue-400",
     },
     {
+      platformName: "Youtube",
       icon: faYoutube,
       href: "https://www.youtube.com/@lastmilent",
       color: "hover:text-red-600",
     },
     {
+      platformName: "Linkedin",
       icon: faLinkedin,
       href: "https://www.linkedin.com/company/lastmilent/",
       color: "hover:text-blue-800",
@@ -46,12 +59,19 @@ export default function Footer() {
           </p>
         </div>
         <div>
-          {socialLinks.map(({ icon: Icon, href, color }) => (
-            <a key={href} href={href} target="_blank" rel="noopener noreferrer">
+          {socialLinks.map(({ platformName, icon: Icon, href, color }) => (
+            <a
+              key={platformName}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white"
+            >
               <FontAwesomeIcon
                 icon={Icon}
-                className={`text-white px-[10px] text-lg md:px-[11px] md:text-xl lg:px-[12px] ${color}`}
+                className={`px-[10px] text-lg md:px-[11px] md:text-xl lg:px-[12px] ${color}`}
               />
+              <span className="sr-only">Follow us on {platformName}</span>
             </a>
           ))}
         </div>
