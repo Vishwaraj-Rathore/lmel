@@ -51,7 +51,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="bg-[#27374D] text-white flex flex-col items-center gap-y-3 min-h-[100px] md:min-h-[120px] justify-center text-[10px] md:text-[14px] lg:flex-row lg:min-h-[100px] lg:justify-between lg:px-12">
+      <footer className="bg-[#27374D] text-white flex flex-col items-center gap-y-3 min-h-[75px] md:min-h-[105px] justify-center text-[10px] md:text-[14px] lg:flex-row lg:min-h-[95px] lg:justify-between lg:px-12">
         <div>
           <p>
             &copy; {new Date().getFullYear()} Last Mile Enterprises Limited. All
