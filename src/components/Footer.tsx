@@ -47,7 +47,7 @@ export default function Footer() {
         </div>
         <div>
           {socialLinks.map(({ icon: Icon, href, color }) => (
-            <a href={href} target="_blank">
+            <a key={href} href={href} target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon
                 icon={Icon}
                 className={`text-[#F5EFE7] px-[10px] text-lg md:px-[11px] md:text-xl lg:px-[12px] ${color}`}
