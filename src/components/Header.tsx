@@ -55,24 +55,19 @@ export default function Header() {
             </ul>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="flex flex-col justify-between h-[40px] w-[45px] md:h-[55px] md:w-[65px] lg:hidden z-10"
+              className="flex flex-col justify-between h-[25px] w-[40px] md:h-[35px] md:w-[55px] lg:hidden z-10"
             >
               <span
                 className={`bg-black block h-[7px] md:h-[9px] w-full transition-all duration-300 ${
                   isOpen
-                    ? "rotate-45 translate-y-[16px] md:translate-y-[22px]"
+                    ? "rotate-45 translate-y-[9px] md:translate-y-[13.5px]"
                     : ""
                 }`}
               ></span>
               <span
-                className={`bg-black block h-[7px] md:h-[9px] w-full transition-all duration-300 ${
-                  isOpen ? "opacity-0" : ""
-                }`}
-              ></span>
-              <span
-                className={`bg-black block h-[7px] md:h-[9px] w-full transition-all duration-300 ${
+                className={`bg-black block h-[7px] md:h-[9.5px] w-full transition-all duration-300 ${
                   isOpen
-                    ? "-rotate-45 -translate-y-[16px] md:-translate-y-[22px]"
+                    ? "-rotate-45 -translate-y-[9.5px] md:-translate-y-[13.5px]"
                     : ""
                 }`}
               ></span>
