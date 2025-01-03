@@ -3,9 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 export default function Header() {
   const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
   type HeaderLink = { title: string; href: string };
 
   const headerLinks: HeaderLink[] = [
@@ -51,6 +53,30 @@ export default function Header() {
                 </li>
               ))}
             </ul>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="flex flex-col justify-between h-[40px] w-[45px] md:h-[55px] md:w-[65px] lg:hidden z-10"
+            >
+              <span
+                className={`bg-black block h-[7px] md:h-[9px] w-full transition-all duration-300 ${
+                  isOpen
+                    ? "rotate-45 translate-y-[16px] md:translate-y-[22px]"
+                    : ""
+                }`}
+              ></span>
+              <span
+                className={`bg-black block h-[7px] md:h-[9px] w-full transition-all duration-300 ${
+                  isOpen ? "opacity-0" : ""
+                }`}
+              ></span>
+              <span
+                className={`bg-black block h-[7px] md:h-[9px] w-full transition-all duration-300 ${
+                  isOpen
+                    ? "-rotate-45 -translate-y-[16px] md:-translate-y-[22px]"
+                    : ""
+                }`}
+              ></span>
+            </button>
           </nav>
         </div>
       </div>
