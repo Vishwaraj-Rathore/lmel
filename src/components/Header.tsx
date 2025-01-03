@@ -84,7 +84,7 @@ export default function Header() {
           {headerLinks.map(({ title, href }) => (
             <li
               key={href}
-              className="hover:text-black text-[25px] pl-[30px] py-[10px] md:text-[30px] md:py-[15px] md:pl-[35px]"
+              className="hover:text-black text-[20px] pl-[20px] py-[10px] md:text-[30px] md:py-[15px] md:pl-[35px]"
             >
               <Link
                 href={href}
