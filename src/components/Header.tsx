@@ -20,7 +20,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 w-full z-10">
-      <div className="flex items-center justify-between bg-[#DDE6ED] p-[15px] md:px-[25px] md:py-[20px] lg:px-[25px] lg:py-[15px]">
+      <div className="flex items-center justify-between bg-[#DDE6ED] p-[15px] md:px-[25px] md:py-[15px]">
         <div className="relative w-[80px] h-[45px] md:w-[115px] md:h-[65px]">
           <Link href={"/"}>
             <div className="relative w-full h-full">

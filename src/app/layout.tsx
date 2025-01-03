@@ -25,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={robotoSlab.className}>
+      <body className={`pt-[75px] md:pt-[95px] ${robotoSlab.className}`}>
         <Header />
         {children}
         <Footer />
