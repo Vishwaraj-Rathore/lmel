@@ -19,7 +19,7 @@ export default function Header() {
   ];
 
   return (
-    <header>
+    <header className="fixed top-0 w-full z-10">
       <div className="flex items-center justify-between bg-[#DDE6ED] p-[15px] md:px-[25px] md:py-[20px] lg:px-[25px] lg:py-[15px]">
         <div className="relative w-[80px] h-[45px] md:w-[115px] md:h-[65px]">
           <Link href={"/"}>
@@ -55,17 +55,17 @@ export default function Header() {
             </ul>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="flex flex-col justify-between h-[25px] w-[40px] md:h-[35px] md:w-[55px] lg:hidden z-10"
+              className="flex flex-col justify-between h-[25px] w-[40px] md:h-[35px] md:w-[55px] lg:hidden"
             >
               <span
                 className={`bg-black block h-[7px] md:h-[9px] w-full transition-all duration-300 ${
                   isOpen
-                    ? "rotate-45 translate-y-[9px] md:translate-y-[13.5px]"
+                    ? "rotate-45 translate-y-[9.5px] md:translate-y-[13.5px]"
                     : ""
                 }`}
               ></span>
               <span
-                className={`bg-black block h-[7px] md:h-[9.5px] w-full transition-all duration-300 ${
+                className={`bg-black block h-[7px] md:h-[9px] w-full transition-all duration-300 ${
                   isOpen
                     ? "-rotate-45 -translate-y-[9.5px] md:-translate-y-[13.5px]"
                     : ""
@@ -74,6 +74,31 @@ export default function Header() {
             </button>
           </nav>
         </div>
+      </div>
+      <div
+        className={`lg:hidden ${
+          isOpen ? "bg-[#DDE6ED] h-screen w-screen" : "hidden"
+        }`}
+      >
+        <ul className="w-full h-full list-none text-[#344a67] pt-[40px]">
+          {headerLinks.map(({ title, href }) => (
+            <li
+              key={href}
+              className="hover:text-black text-[25px] pl-[30px] py-[10px] md:text-[30px] md:py-[15px] md:pl-[35px]"
+            >
+              <Link
+                href={href}
+                className={`${
+                  pathname === href
+                    ? "text-black border-b-[2px] border-black"
+                    : ""
+                }`}
+              >
+                {title}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </header>
   );
