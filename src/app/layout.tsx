@@ -16,6 +16,11 @@ const jost = Jost({
 export const metadata: Metadata = {
   title: "Last Mile Enterprises Limited",
   description: "Your website description",
+  icons: {
+    icon: [{ url: "/icon.png" }, { url: "/icon.svg", type: "image/svg+xml" }],
+    shortcut: ["/favicon.ico"],
+    apple: [{ url: "/apple-touch-icon.png" }],
+  },
 };
 
 export default function RootLayout({
@@ -25,7 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`pt-[75px] md:pt-[85px] ${jost.className}`}>
+      <body className={`pt-[75px] md:pt-[85px] bg-[#DDE6ED] ${jost.className}`}>
         <Header />
         {children}
         <Footer />
