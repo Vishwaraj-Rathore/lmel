@@ -37,7 +37,7 @@ export default function Header() {
         </div>
         <div>
           <nav>
-            <ul className="list-none hidden text-[#344a67] lg:flex lg:gap-x-[40px] ">
+            <ul className="list-none hidden text-[#344a67] lg:text-[18px] lg:flex lg:gap-x-[40px] ">
               {headerLinks.map(({ title, href }) => (
                 <li key={href} className="hover:text-black">
                   <Link
