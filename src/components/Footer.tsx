@@ -51,7 +51,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="bg-[#27374D] text-white flex flex-col items-center gap-y-3 min-h-[75px] md:min-h-[95px] justify-center text-[10px] md:text-[14px] lg:flex-row lg:justify-between lg:px-12">
+      <footer className="bg-[#27374D] text-white flex flex-col items-center gap-y-3 min-h-[75px] md:min-h-[85px] justify-center text-[10px] md:text-[13px] lg:text-[14px] lg:flex-row lg:justify-between lg:px-12">
         <div>
           <p>
             &copy; {new Date().getFullYear()} Last Mile Enterprises Limited. All
@@ -69,7 +69,7 @@ export default function Footer() {
             >
               <FontAwesomeIcon
                 icon={Icon}
-                className={`px-[10px] text-lg md:px-[11px] md:text-xl lg:px-[12px] ${color}`}
+                className={`px-[10px] text-[13px] md:px-[11px] md:text-[15px] lg:text-[17px] lg:px-[12px] ${color}`}
               />
               <span className="sr-only">Follow us on {platformName}</span>
             </a>

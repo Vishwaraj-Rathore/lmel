@@ -21,7 +21,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 w-full z-10">
       <div className="flex items-center justify-between bg-[#DDE6ED] p-[15px] md:px-[25px] md:py-[15px]">
-        <div className="relative w-[80px] h-[45px] md:w-[115px] md:h-[65px]">
+        <div className="relative w-[80px] h-[45px] md:w-[97px] md:h-[55px]">
           <Link href={"/"}>
             <div className="relative w-full h-full">
               <Image
@@ -30,7 +30,7 @@ export default function Header() {
                 alt="Company Logo"
                 fill
                 className="object-contain"
-                sizes="(max-width: 767px) 80px, 115px"
+                sizes="(max-width: 767px) 80px, 97px"
               />
             </div>
           </Link>
@@ -84,7 +84,7 @@ export default function Header() {
           {headerLinks.map(({ title, href }) => (
             <li
               key={href}
-              className="hover:text-black text-[20px] pl-[20px] py-[10px] md:text-[30px] md:py-[15px] md:pl-[35px]"
+              className="hover:text-black text-[20px] pl-[20px] py-[10px] md:text-[25px] md:py-[15px] md:pl-[35px]"
             >
               <Link
                 href={href}
