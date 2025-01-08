@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="!scroll-smooth">
       <body
         className={`pt-[75px] mobile:pt-[78px] tablet:pt-[85px] bg-[#DDE6ED] ${jost.className}`}
       >
