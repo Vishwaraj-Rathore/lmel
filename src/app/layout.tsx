@@ -30,7 +30,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`pt-[75px] md:pt-[85px] bg-[#DDE6ED] ${jost.className}`}>
+      <body
+        className={`pt-[75px] mobile:pt-[78px] tablet:pt-[85px] bg-[#DDE6ED] ${jost.className}`}
+      >
         <Header />
         {children}
         <Footer />
